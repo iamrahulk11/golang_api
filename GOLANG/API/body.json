@@ -1,0 +1,17 @@
+[
+    {
+        "user_id":"1",
+        "username":"jonny",
+        "user_img":"/file1"
+    },
+    {
+        "user_id":"2",
+        "username":"jonny2",
+        "user_img":"/file2"
+    },
+    {
+        "user_id":"3",
+        "username":"jonny3",
+        "user_img":"/file3"
+    }
+]
