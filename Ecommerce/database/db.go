@@ -6,6 +6,7 @@ import (
 	"log"
 
 	config "github.com/golang_api/Ecommerce/Config"
+	_ "github.com/microsoft/go-mssqldb"
 )
 
 func NewSqlStorge(cfg *config.Configuration) (*sql.DB, error) {

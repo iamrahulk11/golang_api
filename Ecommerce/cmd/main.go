@@ -10,7 +10,11 @@ import (
 )
 
 func main() {
-	Configuration := config.GetConfiguration()
+	Configuration, err := config.GetConfiguration()
+	if err != nil {
+		log.Fatal(err)
+	}
+
 	db, err := database.NewSqlStorge(&Configuration)
 	if err != nil {
 		log.Fatal(err)
@@ -18,7 +22,7 @@ func main() {
 
 	initStorage(db)
 
-	server := api.NewAPIServer(":8080", nil)
+	server := api.NewAPIServer(":8080", db)
 	if err := server.Run(); err != nil {
 		log.Fatal(err)
 	}
